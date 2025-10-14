@@ -20,12 +20,15 @@ bld/
 
 # Visual Studio cache/options directory
 .vs/
-.vscode/
+.vscode/*
 !.vscode/extensions.json
 !.vscode/launch.json
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/mcp.json
+!.vscode/*.code-snippets
+*.code-workspace
+
 
 # MSTest test Results
 [Tt]est[Rr]esult*/
@@ -178,14 +181,6 @@ $RECYCLE.BIN/
 # IDEs and Editors
 # =========================
 
-# Visual Studio Code
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-!.vscode/*.code-snippets
-*.code-workspace
 
 # JetBrains IDEs
 .idea/
