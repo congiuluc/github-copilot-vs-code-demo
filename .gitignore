@@ -25,6 +25,7 @@ bld/
 !.vscode/launch.json
 !.vscode/settings.json
 !.vscode/tasks.json
+!.vscode/mcp.json
 
 # MSTest test Results
 [Tt]est[Rr]esult*/
