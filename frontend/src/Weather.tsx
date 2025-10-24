@@ -64,9 +64,9 @@ function Weather() {
         </div>
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
-          {forecasts.map((forecast, index) => (
+          {forecasts.map((forecast) => (
             <div
-              key={index}
+              key={forecast.date}
               className="bg-gradient-to-br from-white to-blue-50 rounded-xl p-4 border border-blue-100 hover:shadow-lg transition-shadow"
             >
               <p className="text-sm font-medium text-gray-600 mb-2">
