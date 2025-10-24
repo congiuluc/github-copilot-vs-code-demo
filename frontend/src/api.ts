@@ -1,4 +1,4 @@
-import { Todo, CreateTodoRequest, UpdateTodoRequest } from './types';
+import { Todo, CreateTodoRequest, UpdateTodoRequest, WeatherForecast } from './types';
 
 const API_BASE_URL = '/api';
 
@@ -68,6 +68,15 @@ export const todoApi = {
     
     const response = await fetch(`${API_BASE_URL}/todos/filter?${params}`);
     if (!response.ok) throw new Error('Failed to filter todos');
+    return response.json();
+  },
+};
+
+export const weatherApi = {
+  // Get weather forecast
+  getWeatherForecast: async (): Promise<WeatherForecast[]> => {
+    const response = await fetch(`${API_BASE_URL}/weather`);
+    if (!response.ok) throw new Error('Failed to fetch weather forecast');
     return response.json();
   },
 };
