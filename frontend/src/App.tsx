@@ -12,6 +12,7 @@ import {
 } from 'lucide-react';
 import { todoApi } from './api';
 import { Todo, CreateTodoRequest } from './types';
+import Weather from './Weather';
 
 function App() {
   const [todos, setTodos] = useState<Todo[]>([]);
@@ -128,6 +129,11 @@ function App() {
       <Toaster position="top-right" />
       
       <div className="max-w-4xl mx-auto">
+        {/* Weather Forecast */}
+        <div className="mb-6">
+          <Weather />
+        </div>
+
         {/* Header */}
         <div className="glass-effect rounded-2xl p-8 mb-6">
           <div className="flex items-center justify-between mb-4">

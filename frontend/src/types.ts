@@ -17,3 +17,10 @@ export interface UpdateTodoRequest {
   description?: string;
   isCompleted: boolean;
 }
+
+export interface WeatherForecast {
+  date: string;
+  temperatureC: number;
+  temperatureF: number;
+  summary: string;
+}

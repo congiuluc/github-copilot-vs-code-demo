@@ -153,4 +153,25 @@ app.MapGet("/api/todos/filter", (bool? completed, string? search) =>
 })
 .WithName("FilterTodos");
 
+// Weather Forecast endpoints
+var summaries = new[]
+{
+    "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
+};
+
+app.MapGet("/api/weather", () =>
+{
+    var forecast = Enumerable.Range(1, 5).Select(index =>
+        new WeatherForecast
+        {
+            Date = DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
+            TemperatureC = Random.Shared.Next(-20, 55),
+            Summary = summaries[Random.Shared.Next(summaries.Length)]
+        })
+        .ToArray();
+    
+    return Results.Ok(forecast);
+})
+.WithName("GetWeatherForecast");
+
 app.Run();
