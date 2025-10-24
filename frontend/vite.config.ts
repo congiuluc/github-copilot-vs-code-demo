@@ -19,4 +19,10 @@ export default defineConfig({
       },
     },
   },
+  // @ts-ignore - test configuration for vitest
+  test: {
+    globals: true,
+    environment: 'jsdom',
+    setupFiles: './src/setupTests.ts',
+  },
 })
